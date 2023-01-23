@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+
+        border: 1px solid black;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(200, 215, 227);
+
+    }
+
+    .inner {
+
+        border: 1px solid red;
+        height: 500px;
+        width: 350px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: rgb(104, 202, 219);
+
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+
+        font-size: 1.2rem;
+
+
+    }
+
+    input {
+
+        width: 300px;
+        padding: 10px;
+    }
+
+    #btn {
+
+        padding: 10px;
+        width: 100px;
+        margin-top: 25px;
+        font-size: 1.5rem;
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
+
+    #btn:hover {
+
+        background-color: blue;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="inner">
+
+            <form>
+                <h1>Login Form</h1><br>
+                <label>UserName :</label>
+                <input type="text" name="UserName" id="UserName" required><br><br>
+
+                <label> Password:</label>
+                <input type="password" name="password" id="password"><br><br>
+
+
+                <button type="button" onclick="login()" id="btn">Login</button>
+                <div id="result"></div>
+            
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function login() {
+
+            var name;
+            var password;
+
+            var name = document.getElementById("UserName").value;
+            var passwordno = document.getElementById("password").value;
+
+
+            if (name == undefined || name == "") {
+                alert(' Please Enter Username ')
+                return
+            }
+            if (passwordno == undefined || passwordno == "") {
+                alert(' Please Enter passwordno ')
+                return
+            }
+
+            if (name == "BharatG") {
+                if (passwordno == "1995") {
+                    alert('succfully Login')
+                    document.getElementById("result").innerHTML = name +"<br>" +passwordno;
+                }
+                else {
+                    alert('Invalide Password')
+                }
+
+
+            }
+            else {
+                alert('Invalide Username')
+
+            }
+           
+
+         
+          
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
